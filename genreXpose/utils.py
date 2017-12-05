@@ -16,15 +16,15 @@ TEST_DIR = config["TEST_DIR"]
 GENRE_LIST = config["GENRE_LIST"]
 
 if GENRE_DIR is None or GENRE_DIR is "":
-    print "Please set GENRE_DIR in config.cfg"
+    print("Please set GENRE_DIR in config.cfg")
     sys.exit(1)
 
 elif TEST_DIR is None or TEST_DIR is "":
-    print "Please set TEST_DIR in config.cfg" 
-    sys.exit(1)    
+    print("Please set TEST_DIR in config.cfg")
+    sys.exit(1)
 
-elif GENRE_LIST is None or len(GENRE_LIST)==0:
-    print "Please set GENRE_LIST in config.cfg" 
+elif GENRE_LIST is None or len(GENRE_LIST) == 0:
+    print("Please set GENRE_LIST in config.cfg")
     sys.exit(1)
 
 else:
@@ -33,12 +33,13 @@ else:
     print("TEST_DIR ==>", TEST_DIR)
     print("GENRE_LIST ==> ", " || ".join(x for x in GENRE_LIST))
 
-    
+
 DATA_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "data")
 
 CHART_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "graphs")
 
-MODEL_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "saved_model")
+MODEL_DIR = os.path.join(os.path.dirname(
+    os.path.realpath(__file__)), "saved_model")
 
 
 for d in [DATA_DIR, CHART_DIR, MODEL_DIR]:
@@ -62,15 +63,15 @@ def convert_dataset_to_wav(file_name):
     rootdir = GENRE_DIR
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
-            path = subdir+'/'+file
+            path = subdir + '/' + file
             if path.endswith("au"):
-                song = AudioSegment.from_file(path,"mp3")
+                song = AudioSegment.from_file(path, "mp3")
                 song = song[:30000]
-                song.export(path[:-3]+"wav",format='wav')
+                song.export(path[:-3] + "wav", format='wav')
 
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
-            path = subdir+'/'+file
+            path = subdir + '/' + file
             if not path.endswith("wav"):
                 os.remove(path)
 
@@ -93,11 +94,12 @@ def plot_confusion_matrix(cm, genre_list, name, title):
     pylab.title(title)
     pylab.colorbar()
     pylab.grid(False)
-    pylab.xlabel('Predicted class', fontsize = 20)
-    pylab.ylabel('True class', fontsize = 20)
+    pylab.xlabel('Predicted class', fontsize=20)
+    pylab.ylabel('True class', fontsize=20)
     pylab.grid(False)
-    #pylab.show()
-    pylab.savefig(os.path.join(CHART_DIR, "confusion_matrix_%s.png" % name), bbox_inches="tight")
+    # pylab.show()
+    pylab.savefig(os.path.join(CHART_DIR, "confusion_matrix_%s.png" %
+                               name), bbox_inches="tight")
 
 
 def plot_roc_curves(auc_score, name, tpr, fpr, label=None):
@@ -114,7 +116,9 @@ def plot_roc_curves(auc_score, name, tpr, fpr, label=None):
     pylab.ylim([0.0, 1.0])
     pylab.xlabel('False Positive Rate')
     pylab.ylabel('True Positive Rate')
-    pylab.title('ROC curve (AUC = %0.2f) / %s' %(auc_score, label), verticalalignment="bottom")
+    pylab.title('ROC curve (AUC = %0.2f) / %s' %
+                (auc_score, label), verticalalignment="bottom")
     pylab.legend(loc="lower right")
     filename = name.replace(" ", "_")
-    pylab.savefig(os.path.join(CHART_DIR, "roc_" + filename + ".png"), bbox_inches="tight")
+    pylab.savefig(os.path.join(CHART_DIR, "roc_" +
+                               filename + ".png"), bbox_inches="tight")

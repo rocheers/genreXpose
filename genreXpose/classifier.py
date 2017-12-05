@@ -87,18 +87,17 @@ def train_model(X, Y, name, plot=False):
 
 if __name__ == "__main__":
     start = timeit.default_timer()
-    print
-    print " Starting classification \n"
-    print " Classification running ... \n" 
+    print("\nStarting classification\n")
+    print("Classification running ...\n")
     X, y = read_ceps(genre_list)
     train_avg, test_avg, cms = train_model(X, y, "ceps", plot=True)
     cm_avg = np.mean(cms, axis=0)
     cm_norm = cm_avg / np.sum(cm_avg, axis=0)
-    print " Classification finished \n"
+    print("Classification finished\n")
     stop = timeit.default_timer()
-    print " Total time taken (s) = ", (stop - start)
-    print "\n Plotting confusion matrix ... \n"
+    print("Total time taken (s) = {}\n".format(stop - start))
+    print("Plotting confusion matrix ...\n")
     plot_confusion_matrix(cm_norm, genre_list, "ceps","CEPS classifier - Confusion matrix")
-    print " All Done\n"
-    print " See plots in 'graphs' directory \n"
+    print("All Done\n")
+    print("See plots in 'graphs' directory \n")
     

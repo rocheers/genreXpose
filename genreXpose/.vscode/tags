@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AudioSegment	../tester.py	/^from pydub import AudioSegment$/;"	kind:namespace	line:17
+AudioSegment	../utils.py	/^from pydub import AudioSegment$/;"	kind:namespace	line:5
+CHART_DIR	../ceps.py	/^from utils import GENRE_DIR, CHART_DIR, GENRE_LIST$/;"	kind:namespace	line:9
+CHART_DIR	../utils.py	/^CHART_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "graphs")$/;"	kind:variable	line:39
+DATA_DIR	../utils.py	/^DATA_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "data")$/;"	kind:variable	line:37
+GENRE_DIR	../ceps.py	/^from utils import GENRE_DIR, CHART_DIR, GENRE_LIST$/;"	kind:namespace	line:9
+GENRE_DIR	../classifier.py	/^from utils import GENRE_LIST, GENRE_DIR, TEST_DIR$/;"	kind:namespace	line:11
+GENRE_DIR	../tester.py	/^from utils import plot_roc, plot_confusion_matrix, GENRE_DIR, GENRE_LIST, TEST_DIR$/;"	kind:namespace	line:13
+GENRE_DIR	../utils.py	/^GENRE_DIR = config["GENRE_DIR"]$/;"	kind:variable	line:14
+GENRE_LIST	../ceps.py	/^from utils import GENRE_DIR, CHART_DIR, GENRE_LIST$/;"	kind:namespace	line:9
+GENRE_LIST	../classifier.py	/^from utils import GENRE_LIST, GENRE_DIR, TEST_DIR$/;"	kind:namespace	line:11
+GENRE_LIST	../tester.py	/^from utils import plot_roc, plot_confusion_matrix, GENRE_DIR, GENRE_LIST, TEST_DIR$/;"	kind:namespace	line:13
+GENRE_LIST	../utils.py	/^GENRE_LIST = config["GENRE_LIST"]$/;"	kind:variable	line:16
+LogisticRegression	../classifier.py	/^from sklearn.linear_model.logistic import LogisticRegression$/;"	kind:namespace	line:8
+LogisticRegression	../tester.py	/^from sklearn.linear_model.logistic import LogisticRegression$/;"	kind:namespace	line:9
+MODEL_DIR	../utils.py	/^MODEL_DIR = os.path.join(os.path.dirname($/;"	kind:variable	line:41
+ShuffleSplit	../classifier.py	/^from sklearn.cross_validation import ShuffleSplit$/;"	kind:namespace	line:7
+ShuffleSplit	../tester.py	/^from sklearn.cross_validation import ShuffleSplit$/;"	kind:namespace	line:8
+TEST_DIR	../classifier.py	/^from utils import GENRE_LIST, GENRE_DIR, TEST_DIR$/;"	kind:namespace	line:11
+TEST_DIR	../tester.py	/^from utils import plot_roc, plot_confusion_matrix, GENRE_DIR, GENRE_LIST, TEST_DIR$/;"	kind:namespace	line:13
+TEST_DIR	../utils.py	/^TEST_DIR = config["TEST_DIR"]$/;"	kind:variable	line:15
+auc	../classifier.py	/^from sklearn.metrics import auc$/;"	kind:namespace	line:6
+auc	../tester.py	/^from sklearn.metrics import auc$/;"	kind:namespace	line:7
+ceps.py	../ceps.py	1;"	kind:file	line:1
+classifier.py	../classifier.py	1;"	kind:file	line:1
+clf	../tester.py	/^clf = None$/;"	kind:variable	line:21
+cm_avg	../classifier.py	/^    cm_avg = np.mean(cms, axis=0)$/;"	kind:variable	line:99
+cm_norm	../classifier.py	/^    cm_norm = cm_avg \/ np.sum(cm_avg, axis=0)$/;"	kind:variable	line:100
+config	../utils.py	/^config = {}$/;"	kind:variable	line:11
+confusion_matrix	../classifier.py	/^from sklearn.metrics import confusion_matrix$/;"	kind:namespace	line:9
+confusion_matrix	../tester.py	/^from sklearn.metrics import confusion_matrix$/;"	kind:namespace	line:10
+convert_any_to_wav	../utils.py	/^def convert_any_to_wav(filename):$/;"	kind:function	line:50
+convert_dataset_to_wav	../utils.py	/^def convert_dataset_to_wav(file_name):$/;"	kind:function	line:57
+create_ceps	../ceps.py	/^def create_ceps(fn):$/;"	kind:function	line:22
+create_ceps_test	../ceps.py	/^def create_ceps_test(fn):$/;"	kind:function	line:49
+create_ceps_test	../tester.py	/^from ceps import read_ceps, create_ceps_test, read_ceps_test$/;"	kind:namespace	line:15
+defaultdict	../classifier.py	/^from collections import defaultdict$/;"	kind:namespace	line:4
+defaultdict	../tester.py	/^from collections import defaultdict$/;"	kind:namespace	line:4
+genre_list	../classifier.py	/^genre_list = GENRE_LIST$/;"	kind:variable	line:15
+genre_list	../tester.py	/^genre_list = GENRE_LIST$/;"	kind:variable	line:19
+glob	../ceps.py	/^import glob$/;"	kind:namespace	line:2
+io	../ceps.py	/^import scipy.io.wavfile$/;"	kind:namespace	line:6
+joblib	../classifier.py	/^from sklearn.externals import joblib$/;"	kind:namespace	line:10
+joblib	../tester.py	/^from sklearn.externals import joblib$/;"	kind:namespace	line:11
+mfcc	../ceps.py	/^from scikits.talkbox.features import mfcc$/;"	kind:namespace	line:7
+np	../ceps.py	/^import numpy as np$/;"	kind:namespace	line:4
+np	../classifier.py	/^import numpy as np$/;"	kind:namespace	line:3
+np	../tester.py	/^import numpy as np$/;"	kind:namespace	line:3
+np	../utils.py	/^import numpy as np$/;"	kind:namespace	line:4
+os	../ceps.py	/^import os$/;"	kind:namespace	line:1
+os	../classifier.py	/^import os$/;"	kind:namespace	line:1
+os	../tester.py	/^import os$/;"	kind:namespace	line:1
+os	../utils.py	/^import os$/;"	kind:namespace	line:1
+path	../ceps.py	/^            path = subdir + '\/' + file$/;"	kind:variable	line:88
+plot_confusion_matrix	../classifier.py	/^from utils import plot_confusion_matrix, plot_roc_curves$/;"	kind:namespace	line:12
+plot_confusion_matrix	../tester.py	/^from utils import plot_roc, plot_confusion_matrix, GENRE_DIR, GENRE_LIST, TEST_DIR$/;"	kind:namespace	line:13
+plot_confusion_matrix	../utils.py	/^def plot_confusion_matrix(cm, genre_list, name, title):$/;"	kind:function	line:82
+plot_roc	../tester.py	/^from utils import plot_roc, plot_confusion_matrix, GENRE_DIR, GENRE_LIST, TEST_DIR$/;"	kind:namespace	line:13
+plot_roc_curves	../classifier.py	/^from utils import plot_confusion_matrix, plot_roc_curves$/;"	kind:namespace	line:12
+plot_roc_curves	../utils.py	/^def plot_roc_curves(auc_score, name, tpr, fpr, label=None):$/;"	kind:function	line:105
+precision_recall_curve	../tester.py	/^from sklearn.metrics import precision_recall_curve, roc_curve$/;"	kind:namespace	line:6
+predicted_genre	../tester.py	/^    predicted_genre = test_model_on_single_file(test_file)$/;"	kind:variable	line:54
+pylab	../utils.py	/^from matplotlib import pylab$/;"	kind:namespace	line:6
+read_ceps	../ceps.py	/^def read_ceps(genre_list, base_dir=GENRE_DIR):$/;"	kind:function	line:32
+read_ceps	../classifier.py	/^from ceps import read_ceps, read_ceps_test$/;"	kind:namespace	line:13
+read_ceps	../tester.py	/^from ceps import read_ceps, create_ceps_test, read_ceps_test$/;"	kind:namespace	line:15
+read_ceps_test	../ceps.py	/^def read_ceps_test(test_file):$/;"	kind:function	line:65
+read_ceps_test	../classifier.py	/^from ceps import read_ceps, read_ceps_test$/;"	kind:namespace	line:13
+read_ceps_test	../tester.py	/^from ceps import read_ceps, create_ceps_test, read_ceps_test$/;"	kind:namespace	line:15
+roc_curve	../classifier.py	/^from sklearn.metrics import roc_curve$/;"	kind:namespace	line:5
+roc_curve	../tester.py	/^from sklearn.metrics import precision_recall_curve, roc_curve$/;"	kind:namespace	line:6
+scipy	../ceps.py	/^import scipy$/;"	kind:namespace	line:5
+scipy	../ceps.py	/^import scipy.io.wavfile$/;"	kind:namespace	line:6
+start	../ceps.py	/^    start = timeit.default_timer()$/;"	kind:variable	line:80
+start	../classifier.py	/^    start = timeit.default_timer()$/;"	kind:variable	line:94
+stop	../ceps.py	/^    stop = timeit.default_timer()$/;"	kind:variable	line:94
+stop	../classifier.py	/^    stop = timeit.default_timer()$/;"	kind:variable	line:102
+sys	../ceps.py	/^import sys$/;"	kind:namespace	line:3
+sys	../utils.py	/^import sys$/;"	kind:namespace	line:2
+test_file	../tester.py	/^    test_file = "..\/..\/testsong\/slph.wav"$/;"	kind:variable	line:53
+test_model_on_single_file	../tester.py	/^def test_model_on_single_file(file_path):$/;"	kind:function	line:28
+tester.py	../tester.py	1;"	kind:file	line:1
+timeit	../ceps.py	/^    import timeit$/;"	kind:namespace	line:79
+timeit	../classifier.py	/^import timeit$/;"	kind:namespace	line:2
+timeit	../tester.py	/^import timeit$/;"	kind:namespace	line:2
+timeit	../utils.py	/^import timeit$/;"	kind:namespace	line:3
+tmp	../ceps.py	/^                tmp = subdir[subdir.rfind('\/', 0) + 1:]$/;"	kind:variable	line:90
+train_model	../classifier.py	/^def train_model(X, Y, name, plot=False):$/;"	kind:function	line:18
+traverse	../ceps.py	/^        traverse = list(set(dirs).intersection(set(GENRE_LIST)))$/;"	kind:variable	line:82
+traverse	../tester.py	/^        traverse = list(set(dirs).intersection(set(GENRE_LIST)))$/;"	kind:variable	line:50
+utils.py	../utils.py	1;"	kind:file	line:1
+wavfile	../ceps.py	/^import scipy.io.wavfile$/;"	kind:namespace	line:6
+write_ceps	../ceps.py	/^def write_ceps(ceps, fn):$/;"	kind:function	line:12

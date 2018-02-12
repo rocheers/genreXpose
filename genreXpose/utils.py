@@ -9,6 +9,13 @@ base_dir = '../../genres_wav/'
 test_dir = '../../genres_test/'
 genre_list = ['classical', 'jazz', 'pop', 'rock']
 
+
+def shuffle_two(a, b):
+    assert a.shape[0] == b.shape[0]
+    p = np.random.permutation(a.shape[0])
+    return a[p], b[p]
+
+
 def create_mfcc_file(path):
     y, sr = librosa.load(path, sr=44100)
     m = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=20)
@@ -17,7 +24,7 @@ def create_mfcc_file(path):
     np.save(mfcc_path, m)
 
 
-def read_mfcc_file(test=False):
+def read_mfcc_file(test=False, shuffle=False):
     dir = test_dir if test else base_dir
     X, y = [], []
     for label, genre in enumerate(genre_list):
@@ -25,7 +32,7 @@ def read_mfcc_file(test=False):
             mfcc = np.load(fn)
             X.append(mfcc)
             y.append(label)
-    return np.array(X), np.array(y)
+    return shuffle_two(np.array(X), np.array(y)) if shuffle else (np.array(X), np.array(y))
 
 
 if __name__ == '__main__':
